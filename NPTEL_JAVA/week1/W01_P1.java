@@ -1,3 +1,5 @@
+package NPTEL_JAVA.week1;
+
 /*
 Week 01 : Programming Assignment 1
 Due on 2026-02-05, 23:59 IST
