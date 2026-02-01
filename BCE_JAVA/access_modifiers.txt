@@ -1,0 +1,232 @@
+Case Study Questions: Access Modifiers in Java
+ 
+
+CASE STUDY 1: Library Management System
+
+ 
+
+Scenario:
+
+A library develops a system named LibrarySystem.
+
+ 
+
+Requirements:
+
+1. Class LibrarySystem must be accessible everywhere.
+
+2. Variable libraryName must be shared and accessible everywhere.
+
+3. Variable totalBooks must be accessible in the same package and subclasses.
+
+4. Variable secretKey must not be accessible outside the class.
+
+5. Method showLibraryInfo() must be accessible everywhere.
+
+6. Method calculateFine() must be accessible only to subclasses.
+
+7. Method generateReport() must be accessible only in the same package.
+
+8. Method validateAdmin() must be accessible only inside LibrarySystem.
+
+ 
+
+Questions:
+
+a) Identify access modifiers for each.
+
+b) Justify the choice of private for secretKey.
+
+ 
+
+ 
+
+ 
+
+ 
+
+CASE STUDY 2: Hospital Management System (Nested Classes)
+
+ 
+
+Scenario:
+
+Class HospitalSystem contains nested classes.
+
+ 
+
+Requirements:
+
+1. Nested class PatientRecord → accessible everywhere.
+
+2. Nested class BillingSystem → accessible only in same package.
+
+3. Nested class InternalAudit → accessible only inside HospitalSystem.
+
+4. Nested class MedicalSupport → accessible to subclasses.
+
+ 
+
+Questions:
+
+a) Assign access modifiers.
+
+b) Can InternalAudit be accessed in main() of HospitalSystem? Explain.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+CASE STUDY 3: Employee Payroll System (Cross-Package)
+
+ 
+
+Scenario:
+
+Package company contains class Employee.
+
+ 
+
+Variables:
+
+1. companyName → accessible everywhere
+
+2. basicSalary → accessible in subclasses only
+
+3. deptCode → accessible in same package only
+
+4. bankPassword → accessible only inside Employee
+
+ 
+
+Methods:
+
+1. display() → everywhere
+
+2. calculateSalary() → subclasses + same package
+
+3. generateSlip() → same package only
+
+4. verifyBankDetails() → class only
+
+ 
+
+Questions:
+
+a) Choose correct access modifiers.
+
+b) Which members are inherited?
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+CASE STUDY 4: Conceptual Question
+
+ 
+
+Given:
+
+class AccessTest {
+
+   private int x = 10;
+
+   private void show() {
+
+       System.out.println(x);
+
+   }
+
+   public static void main(String[] args) {
+
+       AccessTest a = new AccessTest();
+
+       a.show();
+
+   }
+
+}
+
+ 
+
+Questions:
+
+1. Will this code compile? Why?
+
+2. Is show() accessible through object a?
+
+3. Does private restrict access to methods or classes?
+
+ 
+
+--------------------------------------------------
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+CASE STUDY 5: Static vs Instance Variables
+
+ 
+
+Scenario:
+
+Class NetworkConfig contains:
+
+1. Static variable networkName → global access
+
+2. Instance variable ipRange → same package only
+
+3. Static method showNetwork() → global access
+
+4. Instance method configure() → subclasses only
+
+5. Local variable tempValue inside configure()
+
+ 
+
+Questions:
+
+1. Which access modifiers apply to each?
+
+2. Can tempValue be declared private? Why?
+
+Note: Write  program  for all questions.
